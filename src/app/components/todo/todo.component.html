@@ -1,6 +1,6 @@
 <div id='todo'>
   <br>
-  <div style="position: fixed">
+  <div style="position: fixed; height: 100px;">
     <span style="margin-left:10px">Add todo:  </span>
     <input class="intext" name="input" [(ngModel)]="todo" (keyup.enter)="addTodo(todo)">
     <a class="myButton" (click)="addTodo(todo)" name="addTodo">Add todo</a>
@@ -8,9 +8,9 @@
     <br><br><span style="margin-left:10px">Search Todos:</span>
     <input class="intext" name="input">
   </div>
-  <br> <br> <br> <br> <br>
+  <br> <br><br> <br><br>
   <!--<button (click)="addTodo(todo)" name="addTodo">Add todo</button>-->
-  <div style="overflow-y:auto; height: 778px; width:100%; background-color: darkgray; behavior: 'smooth';">
+  <div style="overflow-y:auto; height: 706px; width:100%; background-color: darkgray; behavior: 'smooth';">
     <ul>
       <li *ngFor="let todo of todos$" name="todos" style="list-style-type: none; border:1px solid lightgray; width:99%; height:45px">
         <input type="checkbox" [checked]="todo.completed" (click)="toggleTodo(todo)" /> - <a [ngClass]="{'strike': todo.completed, 'none': !todo.completed}"
