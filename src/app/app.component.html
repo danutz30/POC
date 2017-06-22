@@ -1,3 +1,31 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class="header" *ngIf="isAuth" >
+    <!--<header [@fallIn]="state">
+    <button (click)="logOut()" class="basic-btn">Logout</button>
+  </header>-->
+  <a href="" (click)="logOut()" style="width:65px; height:25px; margin-left:10px; float: right; border: 1px solid black; text-align:center;">Logout</a>
+  <!--<div class="btn"> <button (click)="logOut()" style="width:120px; height:50px; background-color:lightblue; float: right; border: 1px solid;">Logout</button> </div>-->
+</div>
+
+
+  <div class="left_menu" *ngIf="isAuth">
+    <a routerLink="/todo">  Todo</a><br>
+    <a routerLink="/scroll">  InfiniteScroll</a><br>
+    <a routerLink="/counter">  Counter</a><br>
+    <a routerLink="/vote-framework">Vote Framework</a><br>
+  
+  </div>
+
+   <div [ngClass]="{'router': isAuth}">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="right_menu" *ngIf="isAuth">
+    &nbsp;Info<br><br>
+  </div>
+
+    
+
+
+
+

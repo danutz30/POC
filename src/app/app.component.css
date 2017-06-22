@@ -1,0 +1,39 @@
+.header{
+  width:100%; 
+  height: 100px;
+  /*background-color: lightgreen;*/
+  background-image:url("./img/h.png");
+}
+
+.content{
+    width: 100%; 
+    height: 850px;
+    background-color: lightblue;
+}
+
+.left_menu{
+    float:left; 
+    width: 15%; 
+    background-color: lightseagreen; 
+    min-height: 300px;
+    height: 850px;
+}
+
+.router{
+    width:70%;
+    float:left;
+    height: 850px;
+    background-color: lightskyblue;
+}
+
+.right_menu{
+    float:right; 
+    width: 15%; 
+    height: 850px;
+    min-height: 300px;
+    background-color:darkcyan;
+}
+
+.hide_element{
+    display: none;
+}
